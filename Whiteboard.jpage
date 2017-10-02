@@ -1,0 +1,3 @@
+Passenger passenger1 = new Passenger();
+System.out.println(passenger1);
+ArrayList<Flight> names = new ArrayList<Flight>();
