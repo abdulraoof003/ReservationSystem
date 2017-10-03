@@ -3,26 +3,26 @@ package org.airline.reservations;
 public class Passenger {
 
 	//fields
-	private String name;
+	private String passengerName;
 	
 	//constructor
 	public Passenger() {
-		name = "Unknown name";
+		passengerName = "Unknown name";
 	}
 	
 	
-	public Passenger(String name) {
-		this.name = name;
+	public Passenger(String passengerName) {
+		this.passengerName = passengerName;
 	}
 
 	//getters and setters
 
 	public String getName() {
-		return name;
+		return passengerName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setName(String passengerName) {
+		this.passengerName = passengerName;
 	}
 	
 	public String toString() {

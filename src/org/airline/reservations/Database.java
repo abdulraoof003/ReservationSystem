@@ -43,16 +43,24 @@ public class Database {
 
 	}
 
-	public boolean addPassenger(String name) {
+	public boolean addPassenger(String passengerName) {
 		boolean passengerExists = false;
-		for (Passenger item : getPassengers()) {
-			if (name.equals(item.getName())) {
-				passengerExists = true;
-			}
-			if (passengerExists == false) {
-				passengers.add(new Passenger(name));
+		System.out.println("name to be added " + passengerName);
+		
+		if (getPassengers().size() == 0) {
+			passengers.add(new Passenger(passengerName));
+		} else {
+			for (Passenger item : getPassengers()) {
+	
+				if (passengerName.equals(item.getName())) {
+					passengerExists = true;
+				}
+				if (passengerExists == false) {
+					passengers.add(new Passenger(passengerName));
+				}
 			}
 		}
+		System.out.println("Checked passenger exists " + passengerExists);
 		return passengerExists;
 
 	}
@@ -105,6 +113,9 @@ public class Database {
 	}
 
 	public void bootstrap() {
+		
+		//addPassenger("Matt");
+		
 		addSeat(1);
 		addSeat(2);
 		addSeat(3);

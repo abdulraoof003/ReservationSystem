@@ -45,11 +45,8 @@ public class DatabaseTest {
 		boolean result1 = testDB6.addPassenger("Matt Smith");
 		assertEquals(false, result1);
 		boolean result2 = testDB6.addPassenger("Matt Smith");
-		assertEquals(false, result2);
+		assertEquals(true, result2);
 	}
-	
-	
-	
 	
 	
 	@Test

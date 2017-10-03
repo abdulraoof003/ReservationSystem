@@ -11,15 +11,11 @@ public class Flight {
 		this.flightNumber = 999;
 	}
 
-	
-	
 	public Flight(String departureCity, String arrivalCity, int flightNumber) {
 		this.departureCity = departureCity;
 		this.arrivalCity = arrivalCity;
 		this.flightNumber = flightNumber;
 	}
-
-
 
 	public String getDepartureCity() {
 		return departureCity;
@@ -44,7 +40,11 @@ public class Flight {
 	public void setFlightNumber(int flightNumber) {
 		this.flightNumber = flightNumber;
 	}
-	
-	
-	
+
+	public String toString() {
+		return "Flight Number: " + this.getFlightNumber() + " Departure City " + this.getDepartureCity()
+				+ " Arrival City: " + this.getArrivalCity();
+
+	}
+
 }
